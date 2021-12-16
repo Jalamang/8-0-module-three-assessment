@@ -15,13 +15,14 @@ export class People extends React.Component {
   fetchPerson = () => {
       const { person } = this.state;
       console.log(person)
-    
+      
     fetch(`https://ghibliapi.herokuapp.com/people?name=${person.trim()}`)
       .then((response) => response.json())
       .then((data) => {
         const people = data;
+        // const person = people.map(person => person)
         this.setState({
-          person: "",
+          person: person,
           people: people,
           getData: true,
         });
@@ -36,6 +37,7 @@ export class People extends React.Component {
     const {value }  = e.target
     this.setState({ person: value.slice(0,1).toUpperCase() + value.slice(1) });
   };
+  
   render() {
     const { people, getData } = this.state;
     return (
