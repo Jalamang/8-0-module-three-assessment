@@ -1,10 +1,11 @@
 import "./App.css";
+import { City } from "./components/City";
 
 function App() {
   return (
     <div className="app">
       <main>
-        <h1>Hello, world!</h1>
+        <City/>
       </main>
     </div>
   );
