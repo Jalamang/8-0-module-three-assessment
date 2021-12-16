@@ -15,10 +15,10 @@ export default function Navigation() {
         </div>
       <ul>
         <li>
-          <Link to="/movies">Movies</Link>
+          <Link to="movies">Movies</Link>
         </li>
         <li>
-          <Link to="/people"> People</Link>
+          <Link to="people"> People</Link>
         </li>
         <li>
           <Link to="locations">Locations </Link>

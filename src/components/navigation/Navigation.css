@@ -1,0 +1,17 @@
+nav {
+    background-color: rgba(10, 76, 82, 0.667);
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 60rem;
+    margin: 0 auto;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .logo-class {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+  }

@@ -13,8 +13,8 @@ import Locations from "./location/Locations";
       <Switch>
         <Route exact path='/' component={Home}/>
         <Route path="/movies" component={Movies} />
-        <Route path="/people" component={People} />
-        <Route path="/locations" component={Locations} />
+        <Route path="people" component={People} />
+        <Route path="locations" component={Locations} />
       </Switch>
     </div>
   );
