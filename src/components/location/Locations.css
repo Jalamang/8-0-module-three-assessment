@@ -1,0 +1,9 @@
+
+div.locations{
+    border: var(--main-color-border);
+    height: 100vh;
+    background-color: burlywood;
+    margin: 0;
+    padding: 0px;
+    overflow: auto;
+}
