@@ -6,55 +6,59 @@ export class Movies extends React.Component {
   constructor() {
     super();
     this.state = {
+      showCard: true,
       movies: [],
-      movie: '',
+      movie: null,
     };
   }
 
-  fetchMovies = () => {
+
+  getMovies = () => {
     fetch("https://ghibliapi.herokuapp.com/films")
-      .then((response) => response.json())
+      .then((res) => res.json())
       .then((data) => {
         this.setState({
           movies: data,
+          
         });
       });
-  };
-
-  componentDidMount() {
-    this.fetchMovies();
   }
+  
+  componentDidMount () {
+    this.getMovies()
+  }
+
 
   handleChange = (event) => {
     this.setState({
-      movie: this.state.movie[event.target.value],
+      movie: this.state.movies[event.target.value],
     });
   };
+    render() {
+    const { movies, movie, showCard } = this.state;
 
-  render() {
-    const { movies, movie } = this.state;
-    console.log(movie);
     const movieData = movies.map((eachMovie, i) => {
       return (
-        <option key={i} value={eachMovie.id}>
+        <option key={i} value={i}>
           {eachMovie.title}
         </option>
       );
     });
 
+   
     return (
-  
-      <div className="movies">
-        <div>
-          <select >
-          <br />
-            <option>Select a Movie</option>
-            {""}<br /><br />
-            {movieData}
-          </select>
-          {/* <MovieCard movie={movie}/> */}
-        </div>
+      <div className='movies'>
+      <div>
+        <h1>Select a Movie</h1>
+        <br />
+        <select name='movie' onChange={this.handleChange}>
+          <option></option>
+          {movieData}
+        </select>
+        <br />
+        {movie && <MovieCard movie={movie} showCard={showCard}/>}
       </div>
+    </div>
     );
   }
 }

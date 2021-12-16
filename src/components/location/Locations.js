@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 import "./Locations.css";
 
 export class Locations extends Component {
