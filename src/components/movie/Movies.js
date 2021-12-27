@@ -30,8 +30,9 @@ export class Movies extends React.Component {
 
 
   handleChange = (event) => {
+    const {value } = event.target
     this.setState({
-      movie: this.state.movies[event.target.value],
+      movie: this.state.movies[value]
     });
   };
     render() {

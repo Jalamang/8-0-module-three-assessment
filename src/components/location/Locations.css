@@ -7,3 +7,17 @@ div.locations{
     padding: 0px;
     overflow: auto;
 }
+.loc ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+    border: 2px solid white;
+    background-color: rgb(224, 245, 204);
+    padding: 15px;
+    margin: 5px 5px;
+    
+}
+
+.loc button:hover {
+    transform: scale(1.89);
+  }

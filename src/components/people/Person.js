@@ -1,14 +1,15 @@
 import React from 'react'
 
-function Person ({ people }) {
+function Person ({ eachPerson, person}) {
+  console.log(eachPerson)
   return (
     <>
-      { people.length  ?
-        (<div>
-          <h2>Name: {people[0].name}</h2>
-          <p>Age: {people[0].age}</p>
-          <p>Gender: {people[0].gender}</p>
-        </div>) : ( <p>Not Found</p>) }
+      { eachPerson  &&
+        <div>
+          <h2>Name: {eachPerson.name}</h2>
+          <p>Age: {eachPerson.age}</p>
+          <p>Gender: {eachPerson.gender}</p>
+        </div>} {!eachPerson && person && <p>"Not Found"</p> }
     </>
   )
 }

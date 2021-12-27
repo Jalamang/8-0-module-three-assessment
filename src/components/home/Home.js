@@ -1,12 +1,10 @@
-import "./Home.css"
+import "./Home.css";
 const Home = () => {
-  
-        return (<div className='home'>
-          <h1>  Welcome to GhibliApp </h1> 
-          
-        </div> 
-        )
-    
-}
+  return (
+    <div className="home">
+      <h1> Welcome to GhibliApp </h1>
+    </div>
+  );
+};
 
-export default Home
+export default Home;

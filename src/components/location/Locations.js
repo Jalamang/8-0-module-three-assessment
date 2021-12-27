@@ -20,8 +20,9 @@ export class Locations extends Component {
       .then((data) => {
         const locations = data.map((loc, i) => {
           return (
-            <ul>
-              <li key={i}>{loc.name}</li>
+            <ul className="loc">
+             <button> <li key={i}>{loc.name}, {loc.climate}, {loc.terrain};</li>
+             </button>
             </ul>
           );
         });
@@ -44,7 +45,7 @@ export class Locations extends Component {
         <button onClick={this.handleClick}>
           {showLoc ? "Hide Locations" : "Show Locations"}
         </button>
-        <ul>{showLoc ? locations : ""}</ul>
+        <div>{showLoc ? locations : ""}</div>
       </div>
     );
   }
